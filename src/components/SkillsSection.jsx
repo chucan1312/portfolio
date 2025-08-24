@@ -13,7 +13,6 @@ const skills = [
     { name: "C++", level: 50, category: "backend" },
 
     { name: "R", level: 80, category: "data science" },
-    { name: "Pillow", level: 20, category: "data science" },
 
     { name: "Git/GitHub", level: 95, category: "tools" },
     { name: "VS Code", level: 90, category: "tools" },
@@ -43,7 +42,7 @@ export const SkillsSection = () => {
                         key={key} 
                         onClick={() => setActiveCategory(category)}
                         className={cn(
-                            "px-5 py-2 rounded-full transition-colors duration-300 capitalize",
+                            "px-5 py-2 rounded-full border-primary border-2 transition-colors duration-300 capitalize",
                             activeCategory === category ? "bg-primary text-primary-foreground" 
                             : "bg-secondary/70 text-foreground hover:bg-secondary"
                         )}
@@ -66,7 +65,7 @@ export const SkillsSection = () => {
                             </div>
 
                             <div className="text-right mt-1">
-                                <span className="text-sm text-muted-foreground">{skill.level}%</span>
+                                <span className="text-sm text-foreground">{skill.level}%</span>
                             </div>
                         </div>
                     ))}

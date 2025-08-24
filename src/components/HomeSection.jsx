@@ -8,7 +8,7 @@ export const HomeSection = () => {
                     <span className="text-primary opacity-0 animate-fade-in-delay-1"> An</span>
                     <span className="text-gradient opacity-0 animate-fade-in-delay-2"> Trinh</span>
                 </h1>
-                <p className="md:text-lg text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3">
+                <p className="md:text-lg text-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3">
                    I'm a 2nd-year Data Science student at UBC, passionate about Full-Stack Development and Machine Learning. 
                    Self-directed learning has been a major part of my growth, and I'm currently seeking opportunities to contribute
                    my skills through internships and clubs involvement.
@@ -19,7 +19,7 @@ export const HomeSection = () => {
                         View My Work
                     </a>
                     <a className="pl-3"></a>
-                    <a href="./public/An Trinh Resume.pdf" download className="custom-button bg-transparent border-primary border-2 text-primary">Download CV</a>
+                    <a href="./public/An Trinh Resume.pdf" download className="custom-button bg-transparent border-primary border-2 text-foreground">Download CV</a>
                 </div>
             </div>
         </div>

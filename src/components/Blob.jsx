@@ -1,6 +1,6 @@
 export const Blob = ({top = "10%", left = "20%", rgba1 = "rgb(255, 255, 255)", rgba2 = "rgb(255, 255, 255)"}) => {
     const size = `${Math.random() * 20 + 35}rem`;
-    const duration = `${Math.random() * 20 + 20}s`;
+    const duration = `${Math.random() * 15 + 15}s`;
 
     const x0 = `${Math.random() * 600 - 500}px`;
     const y0 = `${Math.random() * 600 - 500}px`;

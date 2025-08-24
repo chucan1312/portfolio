@@ -10,7 +10,7 @@ export const ContactSection = () => {
 
                 <p className="text-center text-foreground mb-12 max-w-2xl mx-auto">
                     I'm always open to new opportunities, collaborations, or simply a chat about tech.
-                    Feel free to reach out to me, I'd love to connect!
+                    Feel free to reach out - I'd love to connect!
                 </p>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-items-center max-w-6xl mx-auto space-y-8">
@@ -33,7 +33,7 @@ export const ContactSection = () => {
                         <div>
                             <h4 className="flex"> Phone Number</h4>
                             <a href="tel:+14377769452" className="text-foreground hover:text-primary transition-colors">
-                                +1 (437) 776-9452
+                                +1 (437) 776-9452&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             </a>
                         </div>
                     </div>

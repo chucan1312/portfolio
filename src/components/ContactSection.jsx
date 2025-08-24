@@ -10,48 +10,48 @@ export const ContactSection = () => {
 
                 <p className="text-center text-foreground mb-12 max-w-2xl mx-auto">
                     I'm always open to new opportunities, collaborations, or simply a chat about tech.
-                    Feel free to reach out to me, I'd love to connect! 
+                    Feel free to reach out to me, I'd love to connect!
                 </p>
 
-                <div className="flex space-y-8 justify-center gap-5">
-                        <div className="flex items-start space-x-4">
-                            <div className="p-3 rounded-full bg-primary/10">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-items-center max-w-6xl mx-auto space-y-8">
+                    <div className="flex items-start space-x-4">
+                        <div className="p-3 rounded-full bg-primary/10">
                             <Mail /> {" "}
-                            </div>
-                            <div> 
-                                <h4 className="flex"> Email</h4>
-                                <a href="mailto:trchan@student.ubc.ca" className="text-foreground hover:text-primary transition-colors">
-                                    trchan@student.ubc.ca
-                                </a>
-                            </div>
                         </div>
+                        <div>
+                            <h4 className="flex"> Email</h4>
+                            <a href="mailto:trchan@student.ubc.ca" className="text-foreground hover:text-primary transition-colors">
+                                trchan@student.ubc.ca
+                            </a>
+                        </div>
+                    </div>
 
-                        <div className="flex items-start space-x-4">
-                            <div className="p-3 rounded-full bg-primary/10">
+                    <div className="flex items-start space-x-4">
+                        <div className="p-3 rounded-full bg-primary/10">
                             <Phone /> {" "}
-                            </div>
-                            <div> 
-                                <h4 className="flex"> Phone Number</h4>
-                                <a href="tel:+14377769452" className="text-foreground hover:text-primary transition-colors">
-                                    +1 (437) 776-9452
-                                </a>
-                            </div>
                         </div>
+                        <div>
+                            <h4 className="flex"> Phone Number</h4>
+                            <a href="tel:+14377769452" className="text-foreground hover:text-primary transition-colors">
+                                +1 (437) 776-9452
+                            </a>
+                        </div>
+                    </div>
 
-                        <div className="flex items-start space-x-4">
-                            <div className="p-3 rounded-full bg-primary/10">
+                    <div className="flex items-start space-x-4">
+                        <div className="p-3 rounded-full bg-primary/10">
                             <MapPin /> {" "}
-                            </div>
-                            <div> 
-                                <h4 className="flex"> Location</h4>
-                                <a className="text-foreground hover:text-primary transition-colors">
-                                    Vancouver, BC, Canada
-                                </a>
-                            </div>
                         </div>
+                        <div>
+                            <h4 className="flex"> Location</h4>
+                            <a className="text-foreground hover:text-primary transition-colors">
+                                Vancouver, BC, Canada
+                            </a>
+                        </div>
+                    </div>
 
                 </div>
-                <div className="pt-8"> 
+                <div className="pt-8">
                     <h4 className="font-medium mb-4">Connect With Me</h4>
                     <div className="flex space-x-4 justify-center">
                         <a href="https://www.linkedin.com/in/chuc-an-trinh-891462332/" target="_blank">

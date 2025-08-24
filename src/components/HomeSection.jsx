@@ -14,12 +14,12 @@ export const HomeSection = () => {
                    my skills through internships and clubs involvement.
                 </p>
 
-                <div className="pt-4 animate-fade-in-delay-4">
+                <div className="pt-4 opacity-0 animate-fade-in-delay-4">
                     <a href="#projects" className="custom-button">
                         View My Work
                     </a>
                     <a className="pl-3"></a>
-                    <a href="./public/An Trinh Resume.pdf" download className="custom-button bg-transparent border-primary border-2 text-foreground">Download CV</a>
+                    <a href="./An Trinh Resume.pdf" download className="custom-button bg-transparent border-primary border-2 text-foreground">Download CV</a>
                 </div>
             </div>
         </div>

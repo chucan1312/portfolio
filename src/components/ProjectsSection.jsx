@@ -1,5 +1,5 @@
-import { Github } from "lucide-react"
-import { ArrowRight } from "lucide-react"
+import { Github, ExternalLink, ArrowRight } from "lucide-react"
+
 const projects = [
     {
         id: 1,
@@ -7,7 +7,8 @@ const projects = [
         description: "A full-stack photobooth web app built with HTML, CSS and JavaScript for the frontend, and Flask for backend routing",
         tags: ["HTML", "CSS", "JavaScript", "Python"],
         githubUrl: "https://github.com/chucan1312/photobooth-project",
-        image: "/projects/project1.png"
+        image: "/projects/project1.png",
+        link: "https://photobooth-project-hf5m.onrender.com"
     },
     {
         id: 2,
@@ -52,7 +53,16 @@ export const ProjectsSection = () => {
 
                                 <p className="text-foreground text-sm mb-4">{project.description}</p>
 
-                                <div className="flex justify-between items-center">
+                                <div className="flex gap-3 items-center">
+                                    {project.title !== "Sales Management Application" && (
+                                        <a
+                                            href={project.link}
+                                            target="_blank"
+                                            className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                                        >
+                                            <ExternalLink />
+                                        </a>
+                                    )}
                                     <a
                                         href={project.githubUrl}
                                         target="_blank"

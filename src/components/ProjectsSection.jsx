@@ -4,7 +4,7 @@ const projects = [
     {
         id: 1,
         title: "Photobooth Web Application",
-        description: "A full-stack photobooth web app built with HTML, CSS and JavaScript for the frontend, and Flask for backend routing",
+        description: "A full-stack photobooth web app built with HTML, CSS and JavaScript for the frontend, and Python for backend routing and image processing",
         tags: ["HTML", "CSS", "JavaScript", "Python"],
         githubUrl: "https://github.com/chucan1312/photobooth-project",
         image: "/projects/project1.png",

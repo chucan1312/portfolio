@@ -9,7 +9,7 @@ const skills = [
 
 
     { name: "Java", level: 75, category: "backend" },
-    { name: "Python (Flask)", level: 60, category: "backend" },
+    { name: "Python", level: 60, category: "backend" },
     { name: "C++", level: 50, category: "backend" },
 
     { name: "R", level: 80, category: "data science" },

@@ -12,11 +12,19 @@ const projects = [
     },
     {
         id: 2,
+        title: "Guess the Celebrity Discord Bot",
+        description: "A discord bot built with Pycord for a multiplayer minigame, where each server's members can guess the celebrity by one of the features",
+        tags: ["Python"],
+        githubUrl: "https://github.com/chucan1312/guess-celeb-discord-bot",
+        image: "/projects/project2.png"
+    },
+    {
+        id: 3,
         title: "Sales Management Application",
         description: "A Java GUI app that allow users to keep track of store's sales and inventory, with JSON-based data persistence",
         tags: ["Java"],
         githubUrl: "https://github.com/chucan1312/cpsc-210-term-project",
-        image: "/projects/project2.png"
+        image: "/projects/project3.png"
     }
 ]
 
@@ -33,9 +41,9 @@ export const ProjectsSection = () => {
                     helped me strengthen my skills in both front-end and back-end development.
                 </p>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-3 justify-items-center max-w-6xl mx-auto gap-50">
                     {projects.map((project, key) => (
-                        <div key={key} className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover">
+                        <div key={key} className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover w-90">
                             <div className="h-48 overflow-hidden">
                                 <img src={project.image} alt={project.title} />
                             </div>
@@ -54,15 +62,14 @@ export const ProjectsSection = () => {
                                 <p className="text-foreground text-sm mb-4">{project.description}</p>
 
                                 <div className="flex gap-3 items-center">
-                                    {project.title !== "Sales Management Application" && (
-                                        <a
-                                            href={project.link}
-                                            target="_blank"
-                                            className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                                        >
-                                            <ExternalLink />
-                                        </a>
-                                    )}
+                                    <a
+                                        href={project.link}
+                                        target="_blank"
+                                        className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                                    >
+                                        <ExternalLink />
+                                    </a>
+                                
                                     <a
                                         href={project.githubUrl}
                                         target="_blank"

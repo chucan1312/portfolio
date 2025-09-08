@@ -13,7 +13,7 @@ const projects = [
     {
         id: 2,
         title: "Guess the Celebrity Discord Bot",
-        description: "A discord bot built with Pycord for a multiplayer minigame, where each server's members can guess the celebrity by one of the features",
+        description: "A discord bot built with Pycord that hosts a multiplayer minigame where members can guess celebrities from their features",
         tags: ["Python"],
         githubUrl: "https://github.com/chucan1312/guess-celeb-discord-bot",
         image: "/projects/project2.png"

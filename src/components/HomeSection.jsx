@@ -9,7 +9,7 @@ export const HomeSection = () => {
                     <span className="text-gradient opacity-0 animate-fade-in-delay-2"> Trinh</span>
                 </h1>
                 <p className="md:text-lg text-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3">
-                   I'm a 2nd-year Data Science student at UBC, passionate about Full-Stack Development and Machine Learning. 
+                   I'm a 2nd-year Computer Science student at UBC, passionate about Full-Stack Development and Machine Learning. 
                    Self-directed learning has been a major part of my growth, and I'm currently seeking opportunities to contribute
                    my skills through internships and clubs involvement.
                 </p>

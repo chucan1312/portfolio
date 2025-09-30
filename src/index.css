@@ -158,3 +158,11 @@
     padding: 0;
     text-align: center;
 }
+
+.scrollbar-hidden {
+    scrollbar-width: none;
+  }
+
+.scrollbar-hidden::-webkit-scrollbar {
+    display: none;
+  }

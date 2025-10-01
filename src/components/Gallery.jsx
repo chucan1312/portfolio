@@ -29,6 +29,7 @@ export const Gallery = () => {
     }
 
     const handleMouseMove = (e) => {
+        setDrag(true);
         if (!isDraggingRef.current) return;
         e.preventDefault(); 
         const x = e.pageX - containerRef.current.offsetLeft;
@@ -49,12 +50,14 @@ export const Gallery = () => {
       
         const tick = () => {
           el.scrollLeft += speed;
-          // reset to start if at the end (for looping effect)
-          if (el.scrollLeft >= el.scrollWidth - el.clientWidth) {
+          if (!(isDraggingRef.current) && (el.scrollLeft >= el.scrollWidth - el.clientWidth - 540)) {
             el.classList.add("snap-none");
-            el.scrollLeft = 1360;
+            el.scrollLeft = 540*2 + 15*3;
+          } else if (isDraggingRef.current && el.scrollLeft >= el.scrollWidth - el.clientWidth) {
+            el.classList.add("snap-none");
+            el.scrollLeft = 540*2.5 - speed*540 + 15*3
           }
-          
+
           raf = requestAnimationFrame(tick);
         };
       
@@ -68,12 +71,14 @@ export const Gallery = () => {
         onMouseMove={handleMouseMove}
         onMouseUp={handleMouseUpOrLeave}
         onMouseLeave={handleMouseUpOrLeave}
-        className={cn("relative overflow-x-auto cursor-grab scrollbar-hidden")} 
+        className={cn("relative overflow-x-auto cursor-grab scrollbar-hidden",
+            drag ? "snap-none" : "snap-x"
+        )} 
         id = "about">
-            <div className="flex gap-4 m-7 py-30">
+            <div className="flex gap-[15px] m-[15px] py-30">
             {renderList.map((item, key) => (
                 <div key={key}>
-                    <div className="w-140 h-80 overflow-hidden opacity-100 rounded-xl flex-shrink-0">
+                    <div className="w-[540px] h-[340px] overflow-hidden opacity-100 rounded-xl flex-shrink-0 snap-center">
                         <img src={item.src} draggable={false}/>
                     </div>
                     <p className="py-3 font-size-4" select-none> {item.description}</p>

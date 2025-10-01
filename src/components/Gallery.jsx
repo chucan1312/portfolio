@@ -9,9 +9,10 @@ const pictures = [
 ]
 
 const renderList = [
-    pictures[pictures.length - 1],
     ...pictures,
     ...pictures,
+    ...pictures,
+    pictures[0]
 ]
 
 export const Gallery = () => {
@@ -44,19 +45,16 @@ export const Gallery = () => {
 
     useEffect(() => {
         const el = containerRef.current;
-      
-        const speed = 0.3; // px per frame (very slow)
+
+        el.scrollLeft = 0;
+
+
+        const speed = 1.3; // px per frame (very slow)
         let raf;
       
         const tick = () => {
           el.scrollLeft += speed;
-          if (!(isDraggingRef.current) && (el.scrollLeft >= el.scrollWidth - el.clientWidth - 540)) {
-            el.classList.add("snap-none");
-            el.scrollLeft = 540*2 + 15*3;
-          } else if (isDraggingRef.current && el.scrollLeft >= el.scrollWidth - el.clientWidth) {
-            el.classList.add("snap-none");
-            el.scrollLeft = 540*2.5 - speed*540 + 15*3
-          }
+
 
           raf = requestAnimationFrame(tick);
         };

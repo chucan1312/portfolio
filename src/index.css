@@ -10,7 +10,7 @@
 
     --color-card: hsl(var(--card));
 
-    
+
     --animate-float: float 6s ease-in-out infinite;
     --animate-fade-in: fade-in 0.7s ease-out forwards;
     --animate-fade-in-delay-1: fade-in 0.7s ease-out 0.2s forwards;
@@ -20,10 +20,12 @@
     --animate-blob: blob 8s ease-in-out infinite;
 
     @keyframes float {
+
         0%,
         100% {
             transform: translateY(0);
         }
+
         50% {
             transform: translateY(-10px);
         }
@@ -34,6 +36,7 @@
             opacity: 0;
             transform: translateY(20px);
         }
+
         to {
             opacity: 1;
             transform: translateY(0);
@@ -42,23 +45,34 @@
 
     @keyframes blob {
         0% {
-            transform: translate(var(--x0), var(--y0)) scale(1); 
+            transform: translate(var(--x0), var(--y0)) scale(1);
             border-radius: 30% 60% 75% 25% / 40% 50% 65% 60%;
         }
+
         33% {
             transform: translate(var(--x1), var(--y1)) scale(1.1);
             border-radius: 60% 25% 30% 75% / 50% 60% 40% 50%;
         }
+
         66% {
             transform: translate(var(--x2), var(--y2)) scale(0.9);
             border-radius: 40% 50% 60% 70% / 60% 75% 40% 50%;
         }
+
         100% {
             transform: translate(var(--x0), var(--y0)) scale(1);
             border-radius: 30% 60% 75% 25% / 40% 50% 65% 60%;
         }
     }
 
+    @keyframes borderSweep {
+        0% {
+            background-position: 200% 0;
+        }
+        100% {
+            background-position: -200% 0;
+        }
+    }
 }
 
 @layer base {
@@ -94,23 +108,57 @@
     }
 }
 
+.glow-border {
+    position: relative;
+}
+
+.glow-border::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1.95px;
+    /* thickness */
+
+    /* show only the ring */
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+
+    /* single-color sweep gradient */
+    background: linear-gradient(90deg,
+            transparent,
+            color-mix(in srgb, var(--color-primary) 20%, transparent),
+            var(--color-primary),
+            color-mix(in srgb, var(--color-primary) 20%, transparent)),
+            transparent;
+    background-size: 200% 100%;
+
+    animation: borderSweep 10s linear infinite;
+}
+
+
 @utility container {
     margin-inline: auto;
     padding-inline: 2rem;
 
-    @media (width >= 640px) {
+    @media (width >=640px) {
         max-width: 640px;
     }
-    @media (width >= 768px) {
+
+    @media (width >=768px) {
         max-width: 768px;
     }
-    @media (width >= 1024px) {
+
+    @media (width >=1024px) {
         max-width: 1024px;
     }
-    @media (width >= 1280px) {
+
+    @media (width >=1280px) {
         max-width: 1280px;
     }
-    @media (width >= 1400px) {
+
+    @media (width >=1400px) {
         max-width: 1400px;
     }
 }
@@ -132,9 +180,7 @@
 }
 
 @utility custom-button {
-    @apply px-6 py-2 rounded-full bg-primary text-primary-foreground font-medium 
-           transition-all duration-300 hover:shadow-[0_0_10px_rgba(139_188_246_0.5)]
-           hover:scale-105 active:scale-95;
+    @apply px-6 py-2 rounded-full bg-primary text-primary-foreground font-medium transition-all duration-300 hover:shadow-[0_0_10px_rgba(139_188_246_0.5)] hover:scale-105 active:scale-95;
 }
 
 @utility blob {
@@ -143,13 +189,13 @@
     width: 20rem;
     height: 20rem;
 
-    background: 
-    radial-gradient(circle, var(--rgba1) 75%, transparent 100%);
+    background:
+        radial-gradient(circle, var(--rgba1) 75%, transparent 100%);
 }
 
 .dark .blob {
-    background: 
-    radial-gradient(circle, var(--rgba2) 65%, transparent 100%);
+    background:
+        radial-gradient(circle, var(--rgba2) 65%, transparent 100%);
 }
 
 #root {
@@ -161,8 +207,8 @@
 
 .scrollbar-hidden {
     scrollbar-width: none;
-  }
+}
 
 .scrollbar-hidden::-webkit-scrollbar {
     display: none;
-  }
+}

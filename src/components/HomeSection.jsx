@@ -22,7 +22,7 @@ export const HomeSection = () => {
                         <a
                             href="./An Trinh Resume.pdf"
                             download
-                            className="custom-button bg-transparent glow-border border-primary text-white"
+                            className="custom-button bg-transparent glow-border border-primary text-foreground"
                         >
                             Download CV
                         </a>

@@ -51,10 +51,8 @@ export const Gallery = () => {
 
         const speed = 1.3; // px per frame (very slow)
         let raf;
-      
         const tick = () => {
           el.scrollLeft += speed;
-
 
           raf = requestAnimationFrame(tick);
         };
@@ -69,14 +67,13 @@ export const Gallery = () => {
         onMouseMove={handleMouseMove}
         onMouseUp={handleMouseUpOrLeave}
         onMouseLeave={handleMouseUpOrLeave}
-        className={cn("relative overflow-x-auto cursor-grab scrollbar-hidden",
-            drag ? "snap-none" : "snap-x"
+        className={cn("relative overflow-x-auto cursor-grab scrollbar-hidden"
         )} 
         id = "about">
             <div className="flex gap-[15px] m-[15px] py-30">
             {renderList.map((item, key) => (
                 <div key={key}>
-                    <div className="w-[540px] h-[340px] overflow-hidden opacity-100 rounded-xl flex-shrink-0 snap-center">
+                    <div className="w-[540px] h-[340px] overflow-hidden opacity-100 rounded-xl flex-shrink-0">
                         <img src={item.src} draggable={false}/>
                     </div>
                     <p className="py-3 font-size-4" select-none> {item.description}</p>

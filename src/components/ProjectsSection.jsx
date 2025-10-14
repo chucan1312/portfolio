@@ -2,6 +2,15 @@ import { Github, ExternalLink, ArrowRight } from "lucide-react"
 
 const projects = [
     {
+        id: 4,
+        title: "Flux",
+        description: "A full-stack study together app that includes focus rooms, multiplayer flashcards, and collaborative note sharings",
+        tags: ["React", "TypeScript", "Tailwind", "Supabase"],
+        githubUrl: "https://github.com/chucan1312/flux.git",
+        image: "/projects/project4.png",
+        link: "https://flux-green.vercel.app/"
+    },
+    {
         id: 1,
         title: "Photobooth Web Application",
         description: "A full-stack photobooth web app built with HTML, CSS and JavaScript for the UI, and Python for routing and image processing",
@@ -9,14 +18,6 @@ const projects = [
         githubUrl: "https://github.com/chucan1312/photobooth-project",
         image: "/projects/project1.png",
         link: "https://photobooth-project-hf5m.onrender.com"
-    },
-    {
-        id: 4,
-        title: "Flux",
-        description: "A full-stack study together app that includes focus rooms, multiplayer flashcards, and collaborative note sharings",
-        tags: ["React", "TypeScript", "Tailwind", "Supabase"],
-        githubUrl: "https://github.com/chucan1312/flux.git",
-        image: "/projects/project4.png"
     },
     {
         id: 2,

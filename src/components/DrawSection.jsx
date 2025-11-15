@@ -1,5 +1,6 @@
 import { useEffect, useState, useRef } from "react";
 import { ReactSketchCanvas } from "react-sketch-canvas";
+import { supabase } from "@/lib/supabase";
 
 export const DrawSection = () => {
     const [isDark, setIsDark] = useState(false);
@@ -11,6 +12,24 @@ export const DrawSection = () => {
     const [objects, setObjects] = useState([]);
 
     const [submit, setSubmit] = useState(false);
+
+    useEffect(() => {
+        async function loadDrawings() {
+            const { data, error } = await supabase
+                .from("drawings")
+                .select("*")
+                .order("created_at", { ascending: true });
+
+            if (error) {
+                console.error("Error loading drawings", error);
+                return;
+            }
+
+            setObjects(data || []);
+        }
+
+        loadDrawings();
+    }, []);
 
     useEffect(() => {
         const root = document.documentElement;
@@ -31,24 +50,59 @@ export const DrawSection = () => {
         return () => observer.disconnect();
     }, []);
 
+    const deleteDrawingById = (id) => {
+        setObjects(prev => prev.filter(obj => obj.id !== id));
+    };
+
     const handleSubmit = async () => {
         if (!canvasRef.current) return;
 
-        const png = await canvasRef.current.exportImage("png");
+        // 1. Export as PNG data URL
+        const dataUrl = await canvasRef.current.exportImage("png");
 
-        // Generate evenly distributed position
+        // 2. Convert base64 data URL to File
+        const blob = await fetch(dataUrl).then(res => res.blob());
+        const fileName = `${crypto.randomUUID()}.png`;
+        const file = new File([blob], fileName, { type: "image/png" });
+
+        // 3. Upload to Supabase Storage
+        const { data: uploadData, error: uploadErr } = await supabase
+            .storage
+            .from("sky-drawings")
+            .upload(fileName, file);
+
+        if (uploadErr) {
+            console.error("Upload error", uploadErr);
+            return;
+        }
+
+        // 4. Get public URL
+        const { data: urlData } = supabase
+            .storage
+            .from("sky-drawings")
+            .getPublicUrl(uploadData.path);
+
+        const image_url = urlData.publicUrl;
+
+        // 5. Generate non-overlapping position
         const { x, y } = generatePosition(objects);
 
-        setObjects(prev => [
-            ...prev,
-            {
-                id: crypto.randomUUID(),
-                src: png,
-                x,
-                y,
-            }
-        ]);
+        // 6. Insert metadata into DB
+        const { data: insertData, error: insertErr } = await supabase
+            .from("drawings")
+            .insert([{ image_url, x, y }])
+            .select()
+            .single();
 
+        if (insertErr) {
+            console.error("Insert error", insertErr);
+            return;
+        }
+
+        // 7. Update local state so UI reflects new drawing instantly
+        setObjects(prev => [...prev, insertData]);
+
+        // 8. Remove drawing UI for this visitor
         setSubmit(true);
         canvasRef.current.clearCanvas();
     };
@@ -79,7 +133,7 @@ export const DrawSection = () => {
     }
 
     return (
-        <section id="draw" className="py-24 px-4 relative bg-secondary/30">
+        <section id="draw" className="px-4 relative bg-secondary/30">
             <h2 className="opacity-50 mb-4">A surprise for those of you who are using dark mode (I'm proud of you)</h2>
             <h2 className="text-3xl md:text-5xl font-bold mb-4 text-center text-foreground">Draw me a
                 <span className="text-primary text-glow"> {`\n`} star</span>
@@ -160,14 +214,14 @@ export const DrawSection = () => {
                         {objects.map(obj => (
                             <img
                                 key={obj.id}
-                                src={obj.src}
+                                src={obj.image_url}
                                 alt="celestial-drawing"
                                 style={{
                                     position: "absolute",
                                     left: `${obj.x}%`,
                                     top: `${obj.y}%`,
-                                    width: "80px",   // adjust
-                                    height: "80px",
+                                    width: "320px", 
+                                    height: "160px",
                                     transform: "translate(-50%, -50%)",
                                 }}
                             />

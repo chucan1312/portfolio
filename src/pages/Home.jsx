@@ -7,6 +7,7 @@ import { ProjectsSection } from "@/components/ProjectsSection"
 import { ContactSection } from "@/components/ContactSection"
 import { Footer } from "@/components/Footer"
 import { Gallery } from "@/components/Gallery" 
+import { DrawSection } from "@/components/DrawSection"
 export const Home = () => {
     return <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
 
@@ -27,6 +28,7 @@ export const Home = () => {
             <Gallery />
             <SkillsSection />
             <ProjectsSection />
+            <DrawSection />
             <ContactSection />
         </main>
 

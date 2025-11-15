@@ -206,10 +206,11 @@ export const DrawSection = () => {
                             </button>
                         </div>
                     </div>
+                    <h2 className="mt-3 opacity-50">P/S: You can check out the full night sky after submitting your drawing</h2>
                 </div>
 
                 : <div>
-                    <h2>Here's the space that all the wonderful people visiting have created</h2>
+                    <h2>Here's the <span className="text-primary text-glow"> space </span> that all the wonderful people visiting have created.</h2>
                     <div className="relative w-full h-[600px] pointer-events-none">
                         {objects.map(obj => (
                             <img

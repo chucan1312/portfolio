@@ -11,6 +11,15 @@ const projects = [
         link: "https://flux-green.vercel.app/"
     },
     {
+        id: 5,
+        title: "MiniMe",
+        description: "MiniMe is your gentle companion that helps you take care of yourself, making self-care feel more like something enjoyable and sustainable",
+        tags: ["React", "HTML", "CSS", "JavaScript"],
+        githubUrl: "https://github.com/iSqlqmi/mini_me",
+        image: "/projects/project5.png",
+        link: "https://mini-me-gilt.vercel.app/"
+    },
+    {
         id: 1,
         title: "Photobooth Web Application",
         description: "A full-stack photobooth web app built with HTML, CSS and JavaScript for the UI, and Python for routing and image processing",

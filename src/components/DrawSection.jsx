@@ -221,8 +221,8 @@ export const DrawSection = () => {
                                     position: "absolute",
                                     left: `${obj.x}%`,
                                     top: `${obj.y}%`,
-                                    width: "320px", 
-                                    height: "160px",
+                                    width: "160px", 
+                                    height: "80px",
                                     transform: "translate(-50%, -50%)",
                                 }}
                             />

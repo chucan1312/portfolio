@@ -50,12 +50,12 @@ export const ProjectsSection = () => {
     return (
         <section id="projects" className="py-24 px-4 relative">
             <div className="container mx-auto max-w-5xl">
-                <h2 className="text-3xl md:text-5xl font-bold mb-4 text-center">Featured
-                    <span className="text-primary"> Projects</span>
+                <h2 className="text-3xl md:text-5xl font-bold mb-4 text-center">
+                    <span className="text-primary"> Projects</span> Gallery
                 </h2>
 
                 <p className="text-center text-foreground mb-12 max-w-2xl mx-auto">
-                    Check out some of the projects I've built so far:
+                    Here's some of my recent work on display — more stuff lives on my Github
                 </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 justify-items-center max-w-6xl mx-auto gap-50 gap-y-8">

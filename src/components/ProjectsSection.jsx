@@ -11,6 +11,14 @@ const projects = [
         link: "https://flux-green.vercel.app/"
     },
     {
+        id: 6,
+        title: "First Love Memory Manipulator",
+        description: "A cozy, idle game inspired by the movie Twinkling Watermelon, where you collect watermelons and decorate the band's practice room",
+        tags: ["Spring Boot", "React"],
+        githubUrl: "https://github.com/chucan1312/twinkling-watermelon",
+        image: "/projects/project6.png"
+    },
+    {
         id: 5,
         title: "MiniMe",
         description: "MiniMe is your gentle companion that helps you take care of yourself, making self-care feel more like something enjoyable and sustainable",

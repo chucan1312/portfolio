@@ -6,7 +6,6 @@ import { SkillsSection } from "@/components/SkillsSection"
 import { ProjectsSection } from "@/components/ProjectsSection"
 import { ContactSection } from "@/components/ContactSection"
 import { Footer } from "@/components/Footer"
-import { Gallery } from "@/components/Gallery"
 import { DrawSection } from "@/components/DrawSection"
 import Carousel from '@/components/Carousel'
 export const Home = () => {
@@ -26,7 +25,7 @@ export const Home = () => {
         {/* Main Content */}
         <main>
             <HomeSection />
-            <div className="flex justify-center gap-[5rem]">
+            <div className="flex justify-center gap-[5rem] pt-[5rem] pb-[1rem]" id="about">
                 <div className="relative w-[50%]">
                     <h1 className="text-3xl md:text-5xl font-bold text-foreground mb-[3rem]"> About <span className="text-primary">Me</span></h1>
 

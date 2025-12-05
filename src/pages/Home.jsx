@@ -25,27 +25,28 @@ export const Home = () => {
         {/* Main Content */}
         <main>
             <HomeSection />
-            <div className="flex justify-center gap-[5rem] pt-[5rem] pb-[1rem]" id="about">
-                <div className="relative w-[50%]">
+            <div className="grid grid-cols-1 lg:grid-cols-[1fr_1fr] pt-[5rem] pb-[1rem]" id="about">
+                <div className="relative ml-[4rem]">
                     <h1 className="text-3xl md:text-5xl font-bold text-foreground mb-[3rem]"> About <span className="text-primary">Me</span></h1>
 
-                    <p className="flex justify-center">My coding journey starts at UBC where I first took the infamous CPSC 110. 
-                        I didn't know a single thing about Computer Science before university 
+                    <p className="flex justify-center">My coding journey started at UBC where I first took the infamous CPSC 110. 
+                        I came in not knowing anything about Computer Science back then, 
                         and sure enough I struggled to trust the natural recursion (iykyk).</p>
                     <br />
                     <p className="flex justify-center">
-                        I went on studying for other CS courses offered at UBC and start learning web development during summer in between
-                        first and second year. I managed to learn HTML/CSS/JavaScript for the first time and coded my first ever personal project 
-                        (that may or may not be very ugly). Since then I've picked up a few more languages and built more stuff than ever (check out my 
-                        project gallery down below).
+                        I went on taking other CS courses offered at UBC and started learning web development during summer in between
+                        first and second year. That's when I built my first ever personal project 
+                        (that may or may not be very ugly). Since then, I’ve picked up more languages and tools, built more projects, and learned more than ever
+                        from the amazing people around me.
                     </p>
                     <br />
                     <p className="flex justify-center">
-                        I've always enjoyed the process of creating something during high school, whether thats choreographing dances, directing art shows, screenwriting for musicals, etc. 
-                        Coming to university, programming has slowly grown on me as something just as creative and exciting. This is also why I'm so interested in Full-Stack Development -
-                        I'm able to create something from scratch and watch it comes to life, just like so many of the things I've done before.
+                        Creativity has always been a big part of my life and what I do - whether it's choreographing dances, directing art shows, or screenwriting for musicals. 
+                        Programming has grown on me as something just as creative and exciting. It's one of the many reasons for my interest in Full-Stack Development -
+                        I'm able to create something from scratch and watch it come to life, just like so many of the things I've done before.
                     </p>
                 </div>
+                <div className="flex justify-center">
                 <Carousel
                     baseWidth={500}
                     autoplay={true}
@@ -54,6 +55,8 @@ export const Home = () => {
                     loop={true}
                     round={false}
                 />
+                </div>
+                
             </div>
             <SkillsSection />
             <ProjectsSection />

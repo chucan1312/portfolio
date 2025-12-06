@@ -3,8 +3,8 @@ import { motion, useMotionValue, useTransform } from 'motion/react';
 
 const DEFAULT_ITEMS = [
     {
-        title: 'My Linkedin Profile Picture',
-        description: "Maybe some people recognize me from this picture (cause I sure do recognize a lot of people with their linkedin pfp)",
+        title: 'My Linkedin profile picture',
+        description: "Maybe some of you recognize me from this picture (cause I sure do recognize a lot of people by their linkedin pfp)",
         id: 1,
         image: "/faces/1.jpg",
     },
@@ -15,7 +15,7 @@ const DEFAULT_ITEMS = [
         image: "/faces/2.jpg",
     },
     {
-        title: 'A cool picture i took',
+        title: 'A cool picture I took',
         description: "I love Seventeen, so I flew to Bangkok while they were on tour to see them :) This is the Follow tour if anyone's curious",
         id: 3,
         image: "/faces/3.jpg",

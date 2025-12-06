@@ -171,7 +171,7 @@ export const DrawSection = () => {
                             }}
                             className={`
                         px-3 rounded-full font-semibold border bg-transparent border-primary border-2 hover:bg-primary
-                        ${isEraser ? "bg-primary text-primary-foreground" : "bg-transparent"}
+                        transition-all duration-250 ${isEraser ? "bg-primary text-primary-foreground" : "bg-transparent"}
                     `}
                         >
                             Eraser
@@ -201,7 +201,7 @@ export const DrawSection = () => {
                             </button>
                             <button
                                 onClick={handleSubmit}
-                                className="bg-primary text-primary-foreground px-2 rounded-full mb-3">
+                                className="bg-primary text-primary-foreground px-2 rounded-full mb-3 hover:bg-[hsl(217,60%,52%)] transition-all duration-250">
                                 Submit
                             </button>
                         </div>

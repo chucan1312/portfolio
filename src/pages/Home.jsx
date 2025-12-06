@@ -26,7 +26,7 @@ export const Home = () => {
         <main>
             <HomeSection />
             <div className="grid grid-cols-1 lg:grid-cols-[1fr_1fr] pt-[5rem] pb-[1rem]" id="about">
-                <div className="relative ml-[4rem]">
+                <div className="relative lg:ml-[4rem] px-[1rem] lg:px-0">
                     <h1 className="text-3xl md:text-5xl font-bold text-foreground mb-[3rem]"> About <span className="text-primary">Me</span></h1>
 
                     <p className="flex justify-center">My coding journey started at UBC where I first took the infamous CPSC 110. 

@@ -13,10 +13,10 @@ const projects = [
     {
         id: 6,
         title: "First Love Memory Manipulator",
-        description: "A cozy, idle game inspired by the movie Twinkling Watermelon, where you collect watermelons and decorate the band's practice room",
+        description: "A cozy, idle game inspired by the Kdrama Twinkling Watermelon, where you collect watermelons and decorate the band's club room",
         tags: ["Spring Boot", "React"],
         githubUrl: "https://github.com/chucan1312/twinkling-watermelon",
-        image: "/projects/project6.png"
+        image: "/projects/project7.png"
     },
     {
         id: 5,

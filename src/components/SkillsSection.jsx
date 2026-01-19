@@ -9,7 +9,7 @@ const skills = [
 
 
     { name: "Java", level: 75, category: "backend" },
-    { name: "Python", level: 65, category: "backend" },
+    { name: "Python", level: 65, category: "backend, data science" },
     { name: "C++", level: 30, category: "backend" },
     { name: "Spring Boot", level: 30, category: "backend" },
 
@@ -17,7 +17,7 @@ const skills = [
     { name: "SQL", level: 10, category: "data science" },
 
     { name: "Git/GitHub", level: 85, category: "tools" },
-    { name: "Supabase", level: 55, category: "tools" },
+    { name: "Supabase", level: 55, category: ["tools", "backend"] },
     { name: "Jupyter Notebook", level: 50, category: "tools" }
 
 ];
@@ -28,7 +28,7 @@ export const SkillsSection = () => {
     const [activeCategory, setActiveCategory] = useState("all");
 
     const filteredSkills = skills.filter(
-        (skill) => activeCategory === "all" || skill.category === activeCategory
+        (skill) => activeCategory === "all" || skill.category.includes(activeCategory)
     );
 
     return (

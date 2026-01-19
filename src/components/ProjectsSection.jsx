@@ -2,7 +2,23 @@ import { Github, ExternalLink, ArrowRight } from "lucide-react"
 
 const projects = [
     {
-        id: 4,
+        id: 3,
+        title: "LEGO Vision",
+        description: "A computer vision project that detects and classifies lego pieces from unsorted pile to suggest small LEGO building ideas",
+        tags: ["YOLO", "Roboflow", "Python (FastAPI)", "React"],
+        githubUrl: "https://github.com/chucan1312/lego-vision",
+        image: "/projects/project8.png",
+        link: "https://devpost.com/software/lego-vision?_gl=1*15w3kun*_gcl_au*MzIyNTkyMjU2LjE3NjEyNzE2MTU.*_ga*NTA5MDk2MzQ3LjE3NjEyNzE2MTY.*_ga_0YHJK3Y10M*czE3Njg3NzY5MTUkbzMzJGcxJHQxNzY4Nzc4MDA3JGo2MCRsMCRoMA.."
+    },
+    {
+        id: 2,
+        title: "First Love Memory Manipulator",
+        description: "A cozy, idle game inspired by the Kdrama Twinkling Watermelon, where you collect watermelons and decorate the band's club room",
+        tags: ["Spring Boot", "React"],
+        githubUrl: "https://github.com/chucan1312/twinkling-watermelon",
+        image: "/projects/project7.png"
+    }, {
+        id: 1,
         title: "Flux",
         description: "A full-stack study together app that includes focus rooms, multiplayer flashcards, and collaborative note sharings",
         tags: ["React", "TypeScript", "Tailwind", "Supabase"],
@@ -11,15 +27,7 @@ const projects = [
         link: "https://flux-green.vercel.app/"
     },
     {
-        id: 6,
-        title: "First Love Memory Manipulator",
-        description: "A cozy, idle game inspired by the Kdrama Twinkling Watermelon, where you collect watermelons and decorate the band's club room",
-        tags: ["Spring Boot", "React"],
-        githubUrl: "https://github.com/chucan1312/twinkling-watermelon",
-        image: "/projects/project7.png"
-    },
-    {
-        id: 5,
+        id: 4,
         title: "MiniMe",
         description: "MiniMe is your gentle companion that helps you take care of yourself, making self-care feel more like something enjoyable and sustainable",
         tags: ["React", "HTML", "CSS", "JavaScript"],
@@ -28,16 +36,7 @@ const projects = [
         link: "https://mini-me-gilt.vercel.app/"
     },
     {
-        id: 1,
-        title: "Photobooth Web Application",
-        description: "A full-stack photobooth web app built with HTML, CSS and JavaScript for the UI, and Python for routing and image processing",
-        tags: ["HTML", "CSS", "JavaScript", "Python"],
-        githubUrl: "https://github.com/chucan1312/photobooth-project",
-        image: "/projects/project1.png",
-        link: "https://photobooth-project-hf5m.onrender.com"
-    },
-    {
-        id: 2,
+        id: 5,
         title: "Guess the Celebrity Discord Bot",
         description: "A discord bot built with Pycord that hosts a multiplayer minigame where members can guess celebrities from their features",
         tags: ["Python"],
@@ -45,7 +44,7 @@ const projects = [
         image: "/projects/project2.png"
     },
     {
-        id: 3,
+        id: 6,
         title: "Sales Management Application",
         description: "A Java GUI app that allow users to keep track of store's sales and inventory, with JSON-based data persistence",
         tags: ["Java"],

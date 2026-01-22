@@ -142,9 +142,9 @@ export const DrawSection = () => {
                 <div>
                     {/* your dark-mode drawing UI */}
 
-                    <h2 className="max-w-3xl mx-auto mb-10"> I've always been fascinated by the beauty of our universe,
+                    <h2 className="max-w-3xl mx-auto mb-2"> I've always been fascinated by the beauty of our universe,
                         which is why I wanted to create a section where visitors to my website can draw something cosmic.
-                        Think stars, planets, aliens, spaceships, etc.
+                        Think stars, planets, aliens, spaceships, etc. <br/> <br/> 
                     </h2>
                     {/* Color Picker */}
                     <div className="flex justify-center gap-3 mb-4">
@@ -206,11 +206,11 @@ export const DrawSection = () => {
                             </button>
                         </div>
                     </div>
-                    <h2 className="mt-3 opacity-50">P/S: You can check out the full night sky after submitting your drawing</h2>
+                    <h2 className="mt-3 opacity-50">P/S: Be mindful! Your drawing will be added to a visible gallery of artworks from all other visitors to my website </h2>
                 </div>
 
                 : <div>
-                    <h2>Here's the <span className="text-primary text-glow"> space </span> that all the wonderful people visiting have created.</h2>
+                    <h2>Here's the <span className="text-primary text-glow"> space </span> that all the wonderful people visited have created.</h2>
                     <div className="relative w-full h-[600px] pointer-events-none">
                         {objects.map(obj => (
                             <img

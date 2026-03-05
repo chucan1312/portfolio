@@ -2,22 +2,23 @@ import { useState } from "react";
 import { cn } from "@/lib/utils";
 
 const skills = [
-    { name: "HTML/CSS", level: 70, category: "frontend" },
-    { name: "JavaScript", level: 60, category: "frontend" },
+    { name: "HTML/CSS", level: 90, category: "frontend" },
+    { name: "JavaScript", level: 80, category: "frontend" },
     { name: "React", level: 90, category: "frontend" },
-    { name: "Tailwind CSS", level: 75, category: "frontend" },
+    { name: "Tailwind CSS", level: 90, category: "frontend" },
 
 
     { name: "Java", level: 75, category: "backend" },
-    { name: "Python", level: 65, category: "backend, data science" },
+    { name: "Python", level: 75, category: "backend, data science" },
     { name: "C++", level: 30, category: "backend" },
-    { name: "Spring Boot", level: 30, category: "backend" },
+    { name: "Spring Boot", level: 30, category: "backend" },    
+    { name: "Express.js", level: 60, category: "backend" },
 
     { name: "R", level: 80, category: "data science" },
-    { name: "SQL", level: 10, category: "data science" },
+    { name: "SQL", level: 20, category: "data science" },
 
     { name: "Git/GitHub", level: 85, category: "tools" },
-    { name: "Supabase", level: 55, category: ["tools", "backend"] },
+    { name: "Supabase", level: 55, category: "tools" },
     { name: "Jupyter Notebook", level: 50, category: "tools" }
 
 ];
@@ -57,17 +58,14 @@ export const SkillsSection = () => {
                 <div className="grid grid-cols1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     {filteredSkills.map((skill, key) => (
                         <div key={key} className="bg-card p-6 rounded-lg shadow-xs card-hover">
-                            <div className="text-left mb-4">
+                            <div className="text-left mb-4 flex justify-between items-center">
                                 <h3 className="font-semibold text-lg">{skill.name}</h3>
+                                <span className="text-sm text-foreground">{skill.level}%</span>
                             </div>
                             <div className="w-full bg-secondary/50 h-2 rounded-full overflow-hidden">
                                 <div className="bg-primary h-2 rounded-full origin-left animate-[grow_1.5s_ease-out]"
                                     style={{ width: skill.level + "%" }}
                                 />
-                            </div>
-
-                            <div className="text-right mt-1">
-                                <span className="text-sm text-foreground">{skill.level}%</span>
                             </div>
                         </div>
                     ))}

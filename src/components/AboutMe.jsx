@@ -5,16 +5,11 @@ export const AboutMe = () => {
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_1fr] pt-[5rem] pb-[1rem]" id="about">
             <div className="relative lg:ml-[4rem] px-[1rem] lg:px-0">
                 <h1 className="text-3xl md:text-5xl font-bold text-foreground mb-[3rem]"> About <span className="text-primary">Me</span></h1>
-
-                <p className="flex justify-center">My coding journey started at UBC where I first took the infamous CPSC 110.
-                    I came in not knowing anything about Computer Science back then,
-                    and sure enough I struggled to trust the natural recursion (iykyk).</p>
-                <br />
                 <p className="flex justify-center">
-                    I went on taking other CS courses offered at UBC and started learning web development during summer in between
-                    first and second year. That's when I built my first ever personal project
-                    (that may or may not be very ugly). Since then, I’ve picked up more languages and tools, built more projects, and learned more than ever
-                    from the amazing people around me.
+                    I'm a 2nd-year Computer Science student at UBC, passionate about Full-Stack Development and Machine Learning.
+                    I enjoy building applications that combine thoughtful design, solid engineering, and intelligent systems.
+                    Through my projects, I'm always looking for ways to turn ideas into real, interactive products while continuously
+                    learning new technologies and improving myselfself as a developer.
                 </p>
                 <br />
                 <p className="flex justify-center">

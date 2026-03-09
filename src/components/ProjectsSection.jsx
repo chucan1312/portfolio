@@ -2,8 +2,8 @@ import { Github, ExternalLink, ArrowRight } from "lucide-react"
 
 const projects = [
     {
-        id: 3,
-        title: "LEGO Vision",
+        id: 1,
+        title: "LEGO Vision (nwHacks 2026)",
         description: "A computer vision project that detects and classifies lego pieces from unsorted pile to suggest small LEGO building ideas",
         tags: ["YOLO", "Roboflow", "Python (FastAPI)", "React"],
         githubUrl: "https://github.com/chucan1312/lego-vision",
@@ -12,13 +12,22 @@ const projects = [
     },
     {
         id: 2,
+        title: "Carades (cmd-f 2026)",
+        description: "A multiplayer coding charades game where players take turn and code out a programming concept for others to guess and earn points",
+        tags: ["Firebase", "React", "Tailwind"],
+        githubUrl: "https://github.com/Fradedaniela0305/Carades",
+        image: "/projects/project9.png",
+        link: "https://carades.vercel.app/"
+    },
+    {
+        id: 3,
         title: "First Love Memory Manipulator",
         description: "A cozy, idle game inspired by the Kdrama Twinkling Watermelon, where you collect watermelons and decorate the band's club room",
         tags: ["Spring Boot", "React"],
         githubUrl: "https://github.com/chucan1312/twinkling-watermelon",
         image: "/projects/project7.png"
     }, {
-        id: 1,
+        id: 4,
         title: "Flux",
         description: "A full-stack study together app that includes focus rooms, multiplayer flashcards, and collaborative note sharings",
         tags: ["React", "TypeScript", "Tailwind", "Supabase"],
@@ -27,21 +36,13 @@ const projects = [
         link: "https://flux-green.vercel.app/"
     },
     {
-        id: 4,
-        title: "MiniMe",
+        id: 5,
+        title: "MiniMe (HackCamp 2025)",
         description: "MiniMe is your gentle companion that helps you take care of yourself, making self-care feel more like something enjoyable and sustainable",
         tags: ["React", "HTML", "CSS", "JavaScript"],
         githubUrl: "https://github.com/iSqlqmi/mini_me",
         image: "/projects/project5.png",
         link: "https://mini-me-gilt.vercel.app/"
-    },
-    {
-        id: 5,
-        title: "Guess the Celebrity Discord Bot",
-        description: "A discord bot built with Pycord that hosts a multiplayer minigame where members can guess celebrities from their features",
-        tags: ["Python"],
-        githubUrl: "https://github.com/chucan1312/guess-celeb-discord-bot",
-        image: "/projects/project2.png"
     },
     {
         id: 6,

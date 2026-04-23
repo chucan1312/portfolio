@@ -37,12 +37,11 @@ const projects = [
     },
     {
         id: 5,
-        title: "MiniMe (HackCamp 2025)",
-        description: "MiniMe is your gentle companion that helps you take care of yourself, making self-care feel more like something enjoyable and sustainable",
-        tags: ["React", "HTML", "CSS", "JavaScript"],
-        githubUrl: "https://github.com/iSqlqmi/mini_me",
-        image: "/projects/project5.png",
-        link: "https://mini-me-gilt.vercel.app/"
+        title: "InsightUBC",
+        description: "A data analytics platform for UBC course and facilities data, supporting CRUD operations and interactive insights through a RESTful architecture",
+        tags: ["Express.js", "Typescript", "React", "Tailwind"],
+        image: "/projects/project10.png",
+        link: "https://www.youtube.com/watch?v=JjYH2CTMGdM"
     },
     {
         id: 6,

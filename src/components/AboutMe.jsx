@@ -9,7 +9,7 @@ export const AboutMe = () => {
                     I'm a 2nd-year Computer Science student at UBC, passionate about Full-Stack Development and Machine Learning.
                     I enjoy building applications that combine thoughtful design, solid engineering, and intelligent systems.
                     Through my projects, I'm always looking for ways to turn ideas into real, interactive products while continuously
-                    learning new technologies and improving myselfself as a developer.
+                    learning new technologies and improving myself as a developer.
                 </p>
                 <br />
                 <p className="flex justify-center">

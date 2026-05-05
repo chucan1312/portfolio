@@ -200,7 +200,7 @@ export default function Carousel({
                                     : 'bg-card'
                                 : round
                                     ? 'bg-[#555]'
-                                    : 'bg-[rgba(71,71,71,0.4)]'
+                                    : 'bg-[rgba(138,138,138,0.4)]'
                                 }`}
                             animate={{
                                 scale: currentIndex % items.length === index ? 1.2 : 1

@@ -16,9 +16,9 @@ export const Home = () => {
         <ThemeToggle />
 
         {/* Background Effects */}
-        <Blob top="10%" left="20%" rgba1="rgba(63, 206, 250, 0.4)" rgba2="rgba(1, 95, 176, 0.5)" />
-        <Blob top="50%" left="70%" rgba1="rgba(180, 82, 255, 0.4)" rgba2="rgba(69, 27, 237, 0.5)" />
-        <Blob top="80%" left="45%" rgba1="rgba(255, 128, 209, 0.4)" rgba2="rgba(255, 23, 170, 0.5)" />
+        <Blob rgba1="rgba(63, 206, 250, 0.4)" rgba2="rgba(1, 95, 176, 0.5)" />
+        <Blob rgba1="rgba(180, 82, 255, 0.4)" rgba2="rgba(69, 27, 237, 0.5)" />
+        <Blob rgba1="rgba(255, 128, 209, 0.4)" rgba2="rgba(255, 23, 170, 0.5)" />
 
         {/* Navbar */}
         <Navbar />

@@ -69,6 +69,7 @@
         0% {
             background-position: 200% 0;
         }
+
         100% {
             background-position: -200% 0;
         }
@@ -131,7 +132,7 @@
             color-mix(in srgb, var(--color-primary) 20%, transparent),
             var(--color-primary),
             color-mix(in srgb, var(--color-primary) 20%, transparent)),
-            transparent;
+        transparent;
     background-size: 200% 100%;
 
     animation: borderSweep 10s linear infinite;
@@ -180,22 +181,101 @@
 }
 
 @utility custom-button {
-    @apply px-6 py-2 rounded-full bg-primary text-primary-foreground font-medium transition-all duration-250 hover:bg-[hsl(217,60%,52%)];
+    @apply px-6 py-2 rounded-full bg-primary text-primary-foreground font-medium transition-all duration-250 hover:bg-[hsl(217, 60%, 52%)];
+}
+
+@utility blob-wrapper {
+    @apply fixed;
+
+    animation: blobMove 20s infinite ease-in-out;
+
+    will-change: transform;
 }
 
 @utility blob {
-    @apply fixed rounded-full filter blur-3xl opacity-70;
-    animation: blob 8s infinite ease-in-out;
+    @apply opacity-70 blur-3xl;
+
     width: 20rem;
     height: 20rem;
 
     background:
-        radial-gradient(circle, var(--rgba1) 75%, transparent 100%);
+        radial-gradient(circle at 30% 30%,
+            var(--rgba1) 0%,
+            transparent 70%),
+        radial-gradient(circle at 70% 70%,
+            var(--rgba2) 0%,
+            transparent 65%);
+
+    filter: blur(60px);
+
+    animation: blobMorph 12s infinite ease-in-out;
+
+    will-change:
+        transform,
+        border-radius;
 }
 
 .dark .blob {
     background:
         radial-gradient(circle, var(--rgba2) 65%, transparent 100%);
+}
+
+@keyframes blobMorph {
+    0% {
+        border-radius: 37% 63% 71% 29% / 44% 39% 61% 56%;
+        transform: scale(1) skew(0deg, 0deg);
+    }
+
+    20% {
+        border-radius: 65% 35% 42% 58% / 31% 69% 36% 64%;
+        transform: scale(1.15) skew(8deg, -4deg);
+    }
+
+    40% {
+        border-radius: 28% 72% 59% 41% / 68% 33% 67% 32%;
+        transform: scale(0.9) skew(-6deg, 7deg);
+    }
+
+    60% {
+        border-radius: 74% 26% 33% 67% / 42% 58% 29% 71%;
+        transform: scale(1.25) skew(5deg, 9deg);
+    }
+
+    80% {
+        border-radius: 45% 55% 76% 24% / 73% 27% 48% 52%;
+        transform: scale(0.95) skew(-8deg, -5deg);
+    }
+
+    100% {
+        border-radius: 37% 63% 71% 29% / 44% 39% 61% 56%;
+        transform: scale(1) skew(0deg, 0deg);
+    }
+}
+
+@keyframes blobMove {
+    0% {
+        transform:
+            translate(var(--x0), var(--y0))
+            rotate(0deg);
+    }
+
+    33% {
+        transform:
+            translate(var(--x1), var(--y1))
+            rotate(120deg);
+    }
+
+    66% {
+        transform:
+            translate(var(--x2), var(--y2))
+            rotate(240deg);
+    }
+
+    100% {
+        transform:
+            translate(var(--x0), var(--y0))
+            rotate(360deg);
+    }
 }
 
 #root {

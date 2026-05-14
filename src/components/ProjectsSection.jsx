@@ -3,15 +3,15 @@ import { Github, ExternalLink, ArrowRight } from "lucide-react"
 const projects = [
     {
         id: 1,
-        title: "LEGO Vision (nwHacks 2026)",
-        description: "A computer vision project that detects and classifies lego pieces from unsorted pile to suggest small LEGO building ideas",
-        tags: ["YOLO", "Roboflow", "Python (FastAPI)", "React"],
-        githubUrl: "https://github.com/chucan1312/lego-vision",
-        image: "/projects/project8.png",
-        link: "https://devpost.com/software/lego-vision?_gl=1*15w3kun*_gcl_au*MzIyNTkyMjU2LjE3NjEyNzE2MTU.*_ga*NTA5MDk2MzQ3LjE3NjEyNzE2MTY.*_ga_0YHJK3Y10M*czE3Njg3NzY5MTUkbzMzJGcxJHQxNzY4Nzc4MDA3JGo2MCRsMCRoMA.."
-    },
+        title: "Blindfeed",
+        description: "An AI-powered anonymous feedback platform with RAG-based semantic search, moderation, and actionable insights",
+        tags: ["Next.js", "PostgreSQL", "OpenAI", "pgvector"],
+        githubUrl: "https://github.com/chucan1312/cpsc-210-term-project",
+        image: "/projects/project11.png",
+        link: "https://feedback-platform-theta.vercel.app/",
+    }, 
     {
-        id: 2,
+        id: 3,
         title: "Carades (cmd-f 2026)",
         description: "A multiplayer coding charades game where players take turn and code out a programming concept for others to guess and earn points",
         tags: ["Firebase", "React", "Tailwind"],
@@ -20,23 +20,15 @@ const projects = [
         link: "https://carades.vercel.app/"
     },
     {
-        id: 3,
-        title: "First Love Memory Manipulator",
-        description: "A cozy, idle game inspired by the Kdrama Twinkling Watermelon, where you collect watermelons and decorate the band's club room",
-        tags: ["Spring Boot", "React"],
-        githubUrl: "https://github.com/chucan1312/twinkling-watermelon",
-        image: "/projects/project7.png"
-    }, {
-        id: 4,
-        title: "Flux",
-        description: "A full-stack study together app that includes focus rooms, multiplayer flashcards, and collaborative note sharings",
-        tags: ["React", "TypeScript", "Tailwind", "Supabase"],
-        githubUrl: "https://github.com/chucan1312/flux.git",
-        image: "/projects/project4.png",
-        link: "https://flux-green.vercel.app/"
-    },
-    {
-        id: 5,
+        id: 2,
+        title: "LEGO Vision (nwHacks 2026)",
+        description: "A computer vision project that detects and classifies lego pieces from unsorted pile to suggest small LEGO building ideas",
+        tags: ["YOLO", "Roboflow", "Python (FastAPI)", "React"],
+        githubUrl: "https://github.com/chucan1312/lego-vision",
+        image: "/projects/project8.png",
+        link: "https://devpost.com/software/lego-vision?_gl=1*15w3kun*_gcl_au*MzIyNTkyMjU2LjE3NjEyNzE2MTU.*_ga*NTA5MDk2MzQ3LjE3NjEyNzE2MTY.*_ga_0YHJK3Y10M*czE3Njg3NzY5MTUkbzMzJGcxJHQxNzY4Nzc4MDA3JGo2MCRsMCRoMA.."
+    },{
+        id: 6,
         title: "InsightUBC",
         description: "A data analytics platform for UBC course and facilities data, supporting CRUD operations and interactive insights through a RESTful architecture",
         tags: ["Express.js", "Typescript", "React", "Tailwind"],
@@ -44,12 +36,20 @@ const projects = [
         link: "https://www.youtube.com/watch?v=JjYH2CTMGdM"
     },
     {
-        id: 6,
-        title: "Sales Management Application",
-        description: "A Java GUI app that allow users to keep track of store's sales and inventory, with JSON-based data persistence",
-        tags: ["Java"],
-        githubUrl: "https://github.com/chucan1312/cpsc-210-term-project",
-        image: "/projects/project3.png"
+        id: 4,
+        title: "First Love Memory Manipulator",
+        description: "A cozy, idle game inspired by the Kdrama Twinkling Watermelon, where you collect watermelons and decorate the band's club room",
+        tags: ["Spring Boot", "React"],
+        githubUrl: "https://github.com/chucan1312/twinkling-watermelon",
+        image: "/projects/project7.png"
+    }, {
+        id: 5,
+        title: "Flux",
+        description: "A full-stack study together app that includes focus rooms, multiplayer flashcards, and collaborative note sharings",
+        tags: ["React", "TypeScript", "Tailwind", "Supabase"],
+        githubUrl: "https://github.com/chucan1312/flux.git",
+        image: "/projects/project4.png",
+        link: "https://flux-green.vercel.app/"
     }
 ]
 

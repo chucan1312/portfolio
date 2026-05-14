@@ -2,28 +2,39 @@ import { useState } from "react";
 import { cn } from "@/lib/utils";
 
 const skills = [
-    { name: "HTML/CSS", level: 90, category: "frontend" },
-    { name: "JavaScript", level: 80, category: "frontend" },
-    { name: "React", level: 90, category: "frontend" },
-    { name: "Tailwind CSS", level: 90, category: "frontend" },
-
-
-    { name: "Java", level: 75, category: "backend" },
-    { name: "Python", level: 75, category: "backend, data science" },
-    { name: "C++", level: 30, category: "backend" },
-    { name: "Spring Boot", level: 30, category: "backend" },    
-    { name: "Express.js", level: 60, category: "backend" },
-
-    { name: "R", level: 80, category: "data science" },
-    { name: "SQL", level: 20, category: "data science" },
-
-    { name: "Git/GitHub", level: 85, category: "tools" },
-    { name: "Supabase", level: 55, category: "tools" },
-    { name: "Jupyter Notebook", level: 50, category: "tools" }
-
+        // Frontend
+        { name: "React", level: 90, category: "frontend" },
+        { name: "Next.js", level: 75, category: "frontend" },
+        { name: "JavaScript", level: 85, category: "frontend" },
+        { name: "HTML/CSS", level: 90, category: "frontend" },
+        { name: "Tailwind CSS", level: 90, category: "frontend" },
+      
+        // Backend
+        { name: "Express.js", level: 65, category: "backend" },
+        { name: "Java", level: 75, category: "backend" },
+        { name: "Spring Boot", level: 40, category: "backend" },
+        { name: "C++", level: 35, category: "backend" },
+      
+        // AI / Data
+        { name: "Python", level: 80, category: "AI/Data" },
+        { name: "RAG", level: 70, category: "AI/Data" },
+        { name: "pgvector", level: 70, category: "AI/Data" },
+        { name: "Qdrant", level: 60, category: "AI/Data" },
+        { name: "R", level: 80, category: "AI/Data" },
+      
+        // Databases
+        { name: "PostgreSQL", level: 70, category: "database" },
+        { name: "MongoDB", level: 65, category: "database" },
+        { name: "SQL", level: 70, category: "database" },
+      
+        // Tools
+        { name: "Git/GitHub", level: 85, category: "tools" },
+        { name: "Supabase", level: 60, category: "tools" },
+        { name: "n8n", level: 55, category: "tools" },
+        { name: "Jupyter Notebook", level: 60, category: "tools" },
 ];
 
-const categories = ["all", "frontend", "backend", "data science", "tools"];
+const categories = ["all", "frontend", "backend", "AI/Data", "database", "tools"];
 
 export const SkillsSection = () => {
     const [activeCategory, setActiveCategory] = useState("all");

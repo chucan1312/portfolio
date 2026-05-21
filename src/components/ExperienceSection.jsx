@@ -26,10 +26,10 @@ export const ExperienceSection = () => {
                 </h2>
                 <div className="text-center w-full">
                     {exps.map((exp, key) => (
-                        <div key={key} className="flex gap-6">
+                        <div key={key} className="grid grid-cols-[1fr_auto_1fr] gap-6">
 
                             {/* LEFT */}
-                            <div className="w-1/2 text-right">
+                            <div className="text-right">
                                 <p className="text-2xl md:text-3xl font-semibold">
                                     {exp.position}
                                 </p>

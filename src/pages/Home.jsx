@@ -28,7 +28,7 @@ export const Home = () => {
         <main>
             <HomeSection />
             <AboutMe />
-            {/* <ExperienceSection /> */}
+            <ExperienceSection />
             <ProjectsSection />
             <DrawSection />
             <ContactSection />

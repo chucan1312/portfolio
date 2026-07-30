@@ -9,7 +9,7 @@ const exps = [
     },
     {
         "position": "AI Engineer Intern",
-        "date": "May 2026-Present",
+        "date": "May 2026 - June 2026",
         "company": "Viettel",
         "location": "Hanoi, Vietnam",
         "description": "",
